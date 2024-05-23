@@ -43,4 +43,4 @@ class ProductController extends AbstractController{
     }
 }
 
-export default ProductController.instance;
+export default ProductController;

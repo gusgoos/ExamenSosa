@@ -13,13 +13,19 @@ class VideogameController extends AbstractController{
     } 
 
     protected initRoutes(): void {
-        this.router.post('/create', this.createVideogame.bind(this));
-        this.router.get('/get/:id', this.getVideogame.bind(this));
+        this.router.post('/create', this.createVideogame);
+        this.router.get('/get/:id', this.getVideogame);
     }
 
     private async createVideogame(req: Request, res: Response) {
+        const { id, title, price, genre } = req.body;
         try {
-            const videogame = await db.Videogame.create(req.body);
+            const videogame = await db.Videogame.create({
+                id,
+                title,
+                price,
+                genre
+            });
             res.status(201).json(videogame);
         } catch (error: any) {
             console.error(error);
@@ -43,4 +49,4 @@ class VideogameController extends AbstractController{
     }
 }
 
-export default VideogameController.instance;
+export default VideogameController;

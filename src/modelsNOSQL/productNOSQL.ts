@@ -14,10 +14,10 @@ const ProductModel = dynamodb.define('product', {
     tableName: `Products${PREFIX_NAME}`
 });
  
-/* dynamodb.createTables((err)=>{
+dynamodb.createTables((err)=>{
     if(err)
         return console.log(err);
     console.log('Tabla creada exitosamente')
-}) */
+}) 
  
 export default ProductModel;

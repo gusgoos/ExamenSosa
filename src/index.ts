@@ -1,7 +1,7 @@
 import Server from './provider/Server';
 import {PORT,NODE_ENV} from './config';
 import express from 'express';
-import VideojuegosController from'./controllers/VideogameController'
+import VideogameController from'./controllers/VideogameController'
 import ProductController from './controllers/ProductController';
 
 const server = new Server({
@@ -12,7 +12,7 @@ const server = new Server({
         express.urlencoded({extended:true})
     ],
     controllers:[
-        VideojuegosController.instance,
+        VideogameController.instance,
         ProductController.instance
     ]
 });
