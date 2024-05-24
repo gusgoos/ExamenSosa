@@ -1,5 +1,5 @@
 {
-  "name": "qualicenter_backend",
+  "name": "pipelinets",
   "version": "1.0.0",
   "description": "En este repositorio se puede acceder al código fuente del backend de nuestro proyecto.",
   "main": "index.js",
